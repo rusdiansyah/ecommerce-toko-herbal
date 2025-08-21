@@ -16,7 +16,7 @@ class OrderCreate extends Component
     #[Title('Order Create')]
     public $title = 'Order Create';
     public $search = '';
-    public $paginate = 10;
+    public $paginate = 6;
     public $nomor, $user_id, $statusBayar, $buktiBayar, $metodeBayar, $total;
     public $order_id, $produk_id, $jumlah, $harga, $subTotal;
     public $isi_Keranjang = 0;
@@ -50,10 +50,19 @@ class OrderCreate extends Component
 
     public function render()
     {
-        $data = Produk::where('stokAda', 1)->paginate($this->paginate);
+        $data = Produk::where('stokAda', 1)
+        ->when($this->search,function($q){
+            $q->whereAny(['nama','deskripsi'],'like','%'.$this->search.'%');
+        })
+        ->paginate($this->paginate);
         return view('livewire.order-create', [
             'data' => $data
         ]);
+    }
+
+    public function updatedSearch()
+    {
+        return $this->resetPage();
     }
 
     public function addToCart($id)

@@ -52,17 +52,16 @@ Route::group(['middleware' => ['auth', 'checkrole:Admin']], function () {
     Route::get('orderList', OrderList::class)->name('orderList');
 
 
-
 });
 
 Route::group(['middleware' => ['auth', 'checkrole:User']], function () {
     Route::get('user/dashboard', UserDashboard::class)->name('user.dashboard');
+    Route::get('user/orderList', UserOrderList::class)->name('userOrderList');
 });
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('photouser', PhotoUser::class)->name('photouser');
 
-    Route::get('user/orderList', UserOrderList::class)->name('userOrderList');
     Route::get('orderKeranjang', OrderKeranjang::class)->name('orderKeranjang');
     Route::get('orderCreate', OrderCreate::class)->name('orderCreate');
     Route::get('reviewProduk', ReviewProduk::class)->name('reviewProduk');
