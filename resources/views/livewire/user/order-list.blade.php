@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.keep-alive>
     <x-card judul="{{ $title }}">
         <table class="table table-hover text-nowrap table-striped">
             <thead>

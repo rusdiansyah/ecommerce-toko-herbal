@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="{{ config('app.deskripsi') }}">
+    <meta name="keywords" content="skripsi, laravel, livewire">
+    <meta name="author" content="{{ config('app.programer') }}">
     <title>{{ $title ?? config('app.name') }}</title>
     @include('components.layouts.style')
     @include('components.layouts.script')
@@ -14,13 +16,13 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-        <x-layouts.front.navbar/>
+        <x-layouts.front.navbar />
         <!-- /.navbar -->
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 440px;">
             <!-- Content Header (Page header) -->
-            <x-layouts.front.content-header/>
+            <x-layouts.front.content-header />
             <!-- /.content-header -->
 
             <!-- Main content -->
@@ -36,7 +38,7 @@
 
 
 
-        <x-layouts.footer/>
+        <x-layouts.footer />
     </div>
     <!-- ./wrapper -->
 
