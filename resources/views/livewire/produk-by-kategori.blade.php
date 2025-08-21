@@ -7,5 +7,8 @@
                     gambar="{{ $item->gambar }}" rating="{{ $item->Rating() }}" />
             @endforeach
         </div>
+        <div class="p-2">
+            {{ $produk->links() }}
+        </div>
     </x-card>
 </div>

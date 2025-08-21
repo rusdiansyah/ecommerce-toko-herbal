@@ -72,5 +72,4 @@ Route::group(['middleware' => ['auth']], function () {
         Auth::logout();
         return redirect('/');
     })->name('logout');
-    // Route::get('errorPage', ErrorPage::class);
 });
