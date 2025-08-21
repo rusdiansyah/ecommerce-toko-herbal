@@ -93,8 +93,12 @@ class OrderCreate extends Component
             $orderDetail->subTotal = ($orderDetail->jumlah + 1) * $produk->harga;
             $orderDetail->save();
         }
+        $this->dispatch('swal',[
+            'title' => 'Success!',
+            'text' => 'Data berhasil disimpan',
+            'icon' => 'success',
+        ]);
         $this->isi_Keranjang = (int) $this->isiKeranjang();
         $this->dispatch('isi-keranjang');
-        // return $this->redirectRoute('orderCreate');
     }
 }
