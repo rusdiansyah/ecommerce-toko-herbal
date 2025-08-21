@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div class="p-0">
+        <div class="table-responsive p-0">
             <table class="table table-hover text-nowrap table-striped">
                 <thead>
                     <th>#</th>
