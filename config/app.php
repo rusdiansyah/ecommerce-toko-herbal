@@ -18,6 +18,7 @@ return [
     'programmer' => '211109.upg.ac.id',
     'warna' => 'success',
     'deskripsi' => 'skripsi najma upg',
+    'keyword' => 'skripsi najma upg',
 
     /*
     |--------------------------------------------------------------------------
