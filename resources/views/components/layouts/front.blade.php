@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ config('app.deskripsi') }}">
     <meta name="keywords" content="skripsi, laravel, livewire">
-    <meta name="author" content="{{ config('app.programer') }}">
+    <meta name="author" content="{{ config('app.programmer') }}">
     <title>{{ $title ?? config('app.name') }}</title>
     @include('components.layouts.style')
     @include('components.layouts.script')
@@ -14,36 +14,17 @@
 
 <body class="layout-top-nav" style="height: auto;">
     <div class="wrapper">
-
-        <!-- Navbar -->
         <x-layouts.front.navbar />
-        <!-- /.navbar -->
-
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" style="min-height: 440px;">
-            <!-- Content Header (Page header) -->
             <x-layouts.front.content-header />
-            <!-- /.content-header -->
-
-            <!-- Main content -->
             <div class="content">
                 <div class="container">
                     {{ $slot }}
-                    <!-- /.row -->
-                </div><!-- /.container-fluid -->
+                </div>
             </div>
-            <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
-
-
-
         <x-layouts.footer />
     </div>
-    <!-- ./wrapper -->
-
-
-
 </body>
 
 </html>

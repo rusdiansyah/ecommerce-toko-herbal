@@ -45,7 +45,7 @@
             </ul>
         </li>
         <x-menu-item link="/orderList" label="Order" icon="fa-tasks" />
-        <x-menu-item link="/orderKeranjang" label="Keranjang" icon="fa-cart-plus" />
+        {{-- <x-menu-item link="/orderKeranjang" label="Keranjang" icon="fa-cart-plus" /> --}}
         <x-menu-item link="/reviewProduk" label="Review Produk" icon="fa-bullhorn" />
 
         <x-menu-item link="/logout" label="Logout" icon="fa-sign-out-alt" />
