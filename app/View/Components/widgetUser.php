@@ -16,10 +16,10 @@ class widgetUser extends Component
      */
     public function __construct()
     {
-        $this->userId = Auth::user()->id;
-        $this->name = Auth::user()->name;
-        $this->role = Auth::user()->role->nama;
-        $this->photo = Auth::user()->photo;
+        $this->userId = Auth::user()->id ?? '';
+        $this->name = Auth::user()->name ?? '';
+        $this->role = Auth::user()->role->nama ?? '';
+        $this->photo = Auth::user()->photo ?? '';
         $this->sales = 'Data';
         $this->jmlSales = 0;
     }
