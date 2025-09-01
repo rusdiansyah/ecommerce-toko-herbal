@@ -16,6 +16,7 @@ class widgetUser extends Component
      */
     public function __construct()
     {
+        dd(Auth::user()->name);
         $this->userId = Auth::user()->id ?? '';
         $this->name = Auth::user()->name ?? '';
         $this->role = Auth::user()->role->nama ?? '';
