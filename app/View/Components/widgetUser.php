@@ -19,7 +19,7 @@ class widgetUser extends Component
     {
         // dd(Auth::user()->name);
         $user = User::findOrFail(Auth::user()->id)->first();
-        dd($user);
+        // dd($user);
         $this->userId = Auth::user()->id ?? '';
         $this->name = Auth::user()->name ?? '';
         $this->role = Auth::user()->role->nama ?? '';
