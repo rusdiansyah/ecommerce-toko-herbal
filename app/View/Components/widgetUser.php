@@ -18,21 +18,16 @@ class widgetUser extends Component
     public function __construct()
     {
         // dd(Auth::user()->name);
-        $user = User::findOrFail(Auth::user()->id)->first();
-        // dd($user);
-        $this->userId = Auth::user()->id ?? '';
-        $this->name = Auth::user()->name ?? '';
-        $this->role = Auth::user()->role->nama ?? '';
-        $this->photo = Auth::user()->photo ?? '';
-        $this->sales = 'Data';
-        $this->jmlSales = 0;
+        // $user = User::findOrFail(Auth::user()->id)->first();
+        // // dd($user);
+        // $this->userId = Auth::user()->id ?? '';
+        // $this->name = Auth::user()->name ?? '';
+        // $this->role = Auth::user()->role->nama ?? '';
+        // $this->photo = Auth::user()->photo ?? '';
+        // $this->sales = 'Data';
+        // $this->jmlSales = 0;
 
     }
-    public function mount()
-    {
-
-    }
-
     /**
      * Get the view / contents that represent the component.
      */

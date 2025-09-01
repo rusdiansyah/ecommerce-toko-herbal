@@ -1,7 +1,7 @@
 <div>
     <div class="row">
         <div class="col-md-4">
-            <x-widget-user/>
+            <x-widget-user name="{{ $name }}" role="{{ $role }}" photo="{{ $photo_old }}" jmlSales="0" sales="Data" />
         </div>
         <div class="col-md-8">
             <div class="card card-{{ config('app.warna') }} card-tabs">

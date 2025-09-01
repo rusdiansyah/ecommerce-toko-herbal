@@ -1,6 +1,7 @@
+@props(['name','role','photo','jmlSales'=>0,'sales'])
 <div class="card card-widget widget-user">
     <div class="widget-user-header bg-info">
-        <h3 class="widget-user-username">Nama</h3>
+        <h3 class="widget-user-username">{{ $name }}</h3>
         <h5 class="widget-user-desc">{{ $role }}</h5>
     </div>
     <div class="widget-user-image">
