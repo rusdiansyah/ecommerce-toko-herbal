@@ -3,6 +3,7 @@
 use App\Livewire\Dashboard;
 use App\Livewire\Favicon;
 use App\Livewire\Home;
+use App\Livewire\HubungiKami;
 use App\Livewire\KategoriList;
 use App\Livewire\Login;
 use App\Livewire\LogoHome;
@@ -21,14 +22,12 @@ use App\Livewire\Setting;
 use App\Livewire\User;
 use App\Livewire\User\Dashboard as UserDashboard;
 use App\Livewire\User\OrderList as UserOrderList;
-use App\Models\Order;
-use App\Models\OrderDetail;
-use App\Models\Produk;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->middleware('guest')->name('home');
 Route::get('/kategori/{id}', ProdukByKategori::class)->middleware('guest')->name('produkKategori');
+Route::get('/hubungikami', HubungiKami::class)->middleware('guest')->name('hubungikami');
 
 Route::get('/login', Login::class)->middleware('guest')->name('login');
 Route::get('/register', Register::class)->middleware('guest')->name('register');

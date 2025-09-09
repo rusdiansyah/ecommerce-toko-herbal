@@ -29,6 +29,9 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('hubungikami') }}" class="nav-link">Hubungi Kami</a>
+                </li>
             </ul>
 
             <!-- SEARCH FORM -->
