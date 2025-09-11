@@ -10,6 +10,7 @@
                     <th>Pelanggan</th>
                     <th>Item</th>
                     <th>Metode<br />Bayar</th>
+                    <th>Rekening</th>
                     <th>Status<br />Bayar</th>
                     <th>Bukti<br />Bayar</th>
                     <th>Total</th>
@@ -26,6 +27,7 @@
                         <td>{{ $item->user->name }}</td>
                         <td>{{ $item->orderDetail->count() }}</td>
                         <td>{{ $item->metodeBayar }}</td>
+                        <td>{{ @$item->rekening->bank }}</td>
                         <td>
                             @if ($item->statusPengiriman == 'Diterima')
                                 <span class="badge badge-success">{{ $item->statusBayar }}</span>
@@ -46,9 +48,10 @@
                         </td>
                         <td>
                             @if ($item->buktiBayar)
-                                <a href="{{ asset('storage/' . $item->buktiBayar) }}" target="_blank">
-                                    <img src="{{ asset('storage/' . $item->buktiBayar) }}" alt="{{ $item->nomor }}"
-                                        width="50">
+                                <a href="{{ asset('storage/' . $item->buktiBayar) }}" target="_blank" class="btn btn-sm btn-primary">
+                                    {{-- <img src="{{ asset('storage/' . $item->buktiBayar) }}" alt="{{ $item->nomor }}"
+                                        width="50" class="hidden"> --}}
+                                        <i class="fa fa-eye"></i>
                                 </a>
                             @endif
 

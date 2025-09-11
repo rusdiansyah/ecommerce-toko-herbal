@@ -13,6 +13,7 @@
             </a>
             <ul class="nav nav-treeview">
                 <x-menu-item link="/setting/identitas" label="Identitas" />
+                <x-menu-item link="/setting/rekening" label="Rekening" />
                 <x-menu-item link="/setting/favicon" label="Favicon" />
                 <x-menu-item link="/setting/logo_login" label="Background Login" />
                 <x-menu-item link="/setting/logo_home" label="Login Home" />

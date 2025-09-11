@@ -8,6 +8,7 @@
                     <th>Pelanggan</th>
                     <th>Item</th>
                     <th>Metode<br />Bayar</th>
+                    <th>Rekening</th>
                     <th>Status<br />Bayar</th>
                     <th>Bukti<br />Bayar</th>
                     <th>Total</th>
@@ -24,6 +25,7 @@
                         <td>{{ $item->user->name }}</td>
                         <td>{{ $item->orderDetail->count() }}</td>
                         <td>{{ $item->metodeBayar }}</td>
+                        <td>{{ @$item->rekening->bank }}</td>
                         <td>
                             {{ $item->statusBayar }}
                         </td>

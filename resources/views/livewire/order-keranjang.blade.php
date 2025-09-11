@@ -70,6 +70,17 @@
     </x-card>
 
     <x-form-modal title="Pembayaran">
+
+        <x-form-select name="rekening_id" label="Rekening (Bank | Nomor | Atas Nama)">
+            <option value="">-Pilih-</option>
+            @foreach ($rekening as $rek)
+            <option value="{{ $rek->id }}">
+                {{ $rek->bank }} |
+                {{ $rek->nomor }} |
+                {{ $rek->nama }}
+            </option>
+            @endforeach
+        </x-form-select>
         <x-form-input name="noWa" label="Nomor WA"/>
         <x-form-text-area name="alamat" label="alamat"/>
         <x-form-input type="file" name="buktiBayar" label="Bukti Bayar" />

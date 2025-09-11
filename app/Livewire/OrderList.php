@@ -78,6 +78,7 @@ class OrderList extends Component
                     return $q->where('user_id', Auth::user()->id);
                 }
             })
+            ->with(['orderDetail','rekening'])
             ->paginate($this->paginate);
         return view('livewire.order-list', [
             'data' => $data

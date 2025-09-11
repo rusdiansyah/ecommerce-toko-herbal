@@ -16,6 +16,7 @@ use App\Livewire\PhotoUser;
 use App\Livewire\ProdukByKategori;
 use App\Livewire\ProdukList;
 use App\Livewire\Register;
+use App\Livewire\RekeningIndex;
 use App\Livewire\ReviewProduk;
 use App\Livewire\Role;
 use App\Livewire\Setting;
@@ -40,6 +41,7 @@ Route::group(['middleware' => ['auth', 'checkrole:Admin']], function () {
     Route::get('setting/favicon', Favicon::class)->name('favicon');
     Route::get('setting/logo_login', LogoLogin::class)->name('logo_login');
     Route::get('setting/logo_home', LogoHome::class)->name('logo_home');
+    Route::get('setting/rekening', RekeningIndex::class)->name('rekening');
 
     Route::get('user/role', Role::class)->name('role');
     Route::get('user/user', User::class)->name('user');

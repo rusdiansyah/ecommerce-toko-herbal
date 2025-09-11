@@ -5,7 +5,7 @@
                 <a href="/" class="h1"><b>{{ config('app.name') }}</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Mendaftar sebagai Member</p>
+                <p class="login-box-msg">Regstrasi</p>
 
                 <form wire:submit.prevent="save">
                     <div class="mb-3">

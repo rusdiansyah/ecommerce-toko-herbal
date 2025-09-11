@@ -16,6 +16,7 @@ class Order extends Model
         'catatan',
         'statusPengiriman',
         'noResi',
+        'rekening_id',
     ];
 
     public function orderDetail()
@@ -26,5 +27,9 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function rekening()
+    {
+        return $this->belongsTo(Rekening::class);
     }
 }

@@ -6,6 +6,7 @@ use App\Models\InfoUser;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Produk;
+use App\Models\Rekening;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -18,7 +19,7 @@ class OrderKeranjang extends Component
     #[Title('Order Isi Keranjang')]
     public $title = 'Order Isi Keranjang';
     public $user_id, $produk_id,$buktiBayar,$total;
-    public $noWa,$alamat;
+    public $rekening_id,$noWa,$alamat;
     public $buktiBayarOld;
     public $postAdd=false;
     public function mount()
@@ -37,8 +38,11 @@ class OrderKeranjang extends Component
             ->with('orderDetail')
             ->first();
         $this->buktiBayarOld = $data->buktiBayar ?? '';
+        $this->rekening_id = $data->rekening_id ?? '';
+        $rekening = Rekening::get();
         return view('livewire.order-keranjang', [
-            'data' => $data
+            'data' => $data,
+            'rekening' => $rekening,
         ]);
     }
     public function decrementQty($id)
@@ -98,6 +102,7 @@ class OrderKeranjang extends Component
     {
         // dd($this->all());
         $this->validate([
+            'rekening_id' => 'required',
             'noWa' => 'required',
             'alamat' => 'required',
             'buktiBayar' => 'required|max:2048',
@@ -117,6 +122,7 @@ class OrderKeranjang extends Component
         ->first();
         $order->buktiBayar = $path;
         $order->total = $orderDetail->total;
+        $order->rekening_id = $this->rekening_id;
         $order->save();
         $this->redirectRoute('orderCreate');
     }
