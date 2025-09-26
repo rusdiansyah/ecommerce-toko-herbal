@@ -57,7 +57,9 @@
 
             </tbody>
         </table>
-
+        <div class="p-2">
+            {{ $data->links() }}
+        </div>
     </x-card-table>
 
     {{-- modal --}}

@@ -58,9 +58,11 @@
                         </td>
                     </tr>
                 @endforeach
-
             </tbody>
         </table>
+        <div class="p-2">
+            {{ $data->links() }}
+        </div>
     </x-card-table>
     <x-form-modal title="Review {{ $nama_produk }}" size="modal-lg">
         <div class="row">
